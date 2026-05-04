@@ -1,9 +1,10 @@
-import { Component, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CardList from "../components/CardList.jsx";
 import SearchBox from "../components/SearchBox.jsx";
 import Scroll from "../components/Scroll.jsx";
 import { kittens } from "../kittens.js";
-const App = () => {
+
+function App() {
   const [kittens, setKittens] = useState([]);
   const [searchfield, setSearchField] = useState("");
 
@@ -14,11 +15,11 @@ const App = () => {
       setKittens(kittens);
     }
     fetchData();
-  }, []);
+  }, []); // the second args is any empty list since we need the useEffect to run only once, which act as componentDidMount() for the Legacy class components
 
-  function onSearchChange(event) {
+  const onSearchChange = (event) => {
     setSearchField(event.target.value);
-  }
+  };
 
   const filteredKittens = kittens.filter((kitten) => {
     return kitten.name.toLowerCase().includes(searchfield.toLowerCase());
@@ -42,6 +43,6 @@ const App = () => {
       </Scroll>
     </div>
   );
-};
+}
 
 export default App;
