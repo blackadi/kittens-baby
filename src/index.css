@@ -52,7 +52,12 @@
 
 body {
   margin: 0;
+  background: linear-gradient(to left, rgb(216, 216, 207) 0%, rgb(187, 172, 40) 100%);
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 #root {
   width: 1126px;
@@ -109,3 +114,27 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.scroll {
+  overflow: scroll;
+  border-style: initial;
+  border-color: #fbf1a9;
+  height: 800px;
+}
+
+/* Loading spinner :) */
+/* Custom waving animation keyframes */
+  @keyframes wave {
+    0%, 40%, 100% { transform: translateY(0); }
+    20% { transform: translateY(-10px); } /* Jump height */
+  }
+
+  /* Style dots and apply animation */
+  .dot {
+    animation: wave 1.2s infinite ease-in-out;
+  }
+
+  /* Stagger the animation for a waving effect */
+  .dot:nth-child(1) { animation-delay: -0.32s; }
+  .dot:nth-child(2) { animation-delay: -0.16s; }
+  .dot:nth-child(3) { animation-delay: 0s; }
