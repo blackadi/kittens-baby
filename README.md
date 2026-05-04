@@ -6,3 +6,6 @@ This is a simple, fun and childrens kitten playground using [{JSON} Placeholder 
 1. Clone this repo `git clone https://github.com/blackadi/kittens-baby.git`
 1. Run  `npm install`
 1. Run  `npm run dev`
+
+## Live Demo
+[Live Demo](https://blackadi.github.io/kittens-baby/)
